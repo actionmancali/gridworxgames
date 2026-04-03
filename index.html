@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridworx Games | Official Book Links</title>
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --neon-blue: #00d2ff;
+            --neon-purple: #9d50bb;
+            --neon-gold: #f39c12;
+            --neon-green: #2ecc71;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image: radial-gradient(circle at 50% -20%, #1a1a2e, #0a0a0c);
+            color: var(--text);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh; padding: 20px 20px 60px 20px;
+        }
+
+        .logo-container { margin-top: 40px; margin-bottom: 30px; text-align: center; }
+        /* This matches your uploaded filename "Logo.jpg" */
+        .logo-container img { max-width: 320px; height: auto; filter: drop-shadow(0 0 15px rgba(157, 80, 187, 0.4)); }
+
+        .container { width: 100%; max-width: 550px; display: flex; flex-direction: column; gap: 15px; }
+
+        .link-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 18px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            display: flex; flex-direction: column;
+            border-left: 5px solid transparent;
+        }
+
+        .link-card:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .link-card h3 { margin: 0 0 5px 0; font-size: 1.1rem; letter-spacing: 0.5px; }
+        .link-card p { margin: 0; font-size: 0.85rem; opacity: 0.7; line-height: 1.4; }
+
+        .sudoku-main { border-left-color: var(--neon-gold); }
+        .sharp-minds { border-left-color: var(--neon-blue); }
+        .odyssey { border-left-color: var(--neon-purple); }
+        .mindful { border-left-color: var(--neon-green); }
+        .recovery { border-left-color: #e74c3c; }
+
+        .section-header {
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;
+            margin: 25px 0 10px 5px; color: var(--neon-blue); opacity: 0.8;
+        }
+
+        footer { margin-top: 50px; text-align: center; font-size: 0.75rem; opacity: 0.5; }
+        .buy-tag { font-size: 0.7rem; font-weight: bold; margin-top: 10px; color: var(--neon-gold); text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="Logo.jpg" alt="Gridworx Games Logo">
+    </div>
+
+    <div class="container">
+        
+        <div class="section-header">Puzzles & Brain Training</div>
+
+        <a href="https://www.amazon.com/-/he/Steven-Smith/dp/B0GNPNC63R" class="link-card sudoku-main" target="_blank">
+            <h3>The 2026 Colossal Book of Sudoku</h3>
+            <p>Master Your Mind with 2,026+ Hand-Crafted Grids. The definitive collection for the 2026 calendar year.</p>
+            <div class="buy-tag">View on Amazon →</div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/B0GHJG4JX2" class="link-card sharp-minds" target="_blank">
+            <h3>Sudoku for Sharp Minds™</h3>
+            <p>Extra Large Print Collection (5 Books)</p>
+            <div class="buy-tag">Shop Series →</div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/B0GN28Q5HK" class="link-card mindful" target="_blank">
+            <h3>SUDOKU JOURNEY</h3>
+            <p>Finding, Knowing, Mastering Zen Series: Volume 1</p>
+            <div class="buy-tag">Start Your Journey →</div>
+        </a>
+
+        <div class="section-header">Mindful Sanctuary & Recovery</div>
+
+        <a href="https://www.amazon.com/dp/B0GS9SQK9L" class="link-card mindful" target="_blank">
+            <h3>Mindful Sanctuary: The Cryptogram Collection</h3>
+            <p>Engage your focus with challenging and serene cryptograms.</p>
+            <div class="buy-tag">Explore Collection →</div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/B0GPMZ1VQD" class="link-card mindful" target="_blank">
+            <h3>Mindful Sanctuary: Travel-Sized Activity Book</h3>
+            <p>A tranquil puzzle companion designed for mindful moments on the go.</p>
+            <div class="buy-tag">View Companion →</div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/B0GTGYYDB5" class="link-card recovery" target="_blank">
+            <h3>One Day at a Time: The Twelve Principles</h3>
+            <p>Recovery-Focused Word Search Puzzle Book.</p>
+            <div class="buy-tag">Shop Now →</div>
+        </a>
+
+        <div class="section-header">Stationery & Art</div>
+
+        <a href="https://www.amazon.com/dp/B0GTBW9MMC" class="link-card odyssey" target="_blank">
+            <h3>Gridworx Odyssey Collection</h3>
+            <p>Artistic Wide Ruled Composition Stationery (5 Books)</p>
+            <div class="buy-tag">View Designs →</div>
+        </a>
+
+    </div>
+
+    <footer>
+        &copy; 2026 GRIDWORX GAMES | CARLSBAD, CA
+    </footer>
+
+</body>
+</html>
