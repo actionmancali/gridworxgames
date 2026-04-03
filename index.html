@@ -26,10 +26,9 @@
         }
 
         .logo-container { margin-top: 40px; margin-bottom: 30px; text-align: center; }
-        /* This matches your uploaded filename "Logo.png" */
         .logo-container img { max-width: 320px; height: auto; filter: drop-shadow(0 0 15px rgba(157, 80, 187, 0.4)); }
 
-        .container { width: 100%; max-width: 550px; display: flex; flex-direction: column; gap: 15px; }
+        .container { width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 15px; }
 
         .link-card {
             background: var(--card-bg);
@@ -40,7 +39,9 @@
             text-decoration: none;
             color: white;
             transition: all 0.3s ease;
-            display: flex; flex-direction: column;
+            display: flex; 
+            flex-direction: row; /* Aligns thumb and text side-by-side */
+            align-items: center;
             border-left: 5px solid transparent;
         }
 
@@ -50,6 +51,19 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border-color: rgba(255, 255, 255, 0.3);
         }
+
+        /* The Thumbnail Style */
+        .book-thumb {
+            width: 80px; /* Fixed width for covers */
+            height: 105px; /* Proportional height */
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 20px; /* Space between cover and text */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            background-color: #222; /* Fallback color */
+        }
+
+        .card-content { flex: 1; }
 
         .link-card h3 { margin: 0 0 5px 0; font-size: 1.1rem; letter-spacing: 0.5px; }
         .link-card p { margin: 0; font-size: 0.85rem; opacity: 0.7; line-height: 1.4; }
@@ -72,7 +86,7 @@
 <body>
 
     <div class="logo-container">
-        <img src="Logo.png" alt="Gridworx Games Logo">
+        <img src="Logo.jpg" alt="Gridworx Games Logo">
     </div>
 
     <div class="container">
@@ -80,49 +94,70 @@
         <div class="section-header">Puzzles & Brain Training</div>
 
         <a href="https://www.amazon.com/-/he/Steven-Smith/dp/B0GNPNC63R" class="link-card sudoku-main" target="_blank">
-            <h3>The 2026 Colossal Book of Sudoku</h3>
-            <p>Master Your Mind with 2,026+ Hand-Crafted Grids. The definitive collection for the 2026 calendar year.</p>
-            <div class="buy-tag">View on Amazon →</div>
+            <img src="2026sudoku.jpg" alt="2026 Colossal Sudoku" class="book-thumb">
+            <div class="card-content">
+                <h3>The 2026 Colossal Book of Sudoku</h3>
+                <p>Master Your Mind with 2,026+ Hand-Crafted Grids.</p>
+                <div class="buy-tag">View on Amazon →</div>
+            </div>
         </a>
 
         <a href="https://www.amazon.com/dp/B0GHJG4JX2" class="link-card sharp-minds" target="_blank">
-            <h3>Sudoku for Sharp Minds™</h3>
-            <p>Extra Large Print Collection (5 Books)</p>
-            <div class="buy-tag">Shop Series →</div>
+            <img src="sharp-minds.jpg" alt="Sharp Minds" class="book-thumb">
+            <div class="card-content">
+                <h3>Sudoku for Sharp Minds™</h3>
+                <p>Extra Large Print Collection (5 Books)</p>
+                <div class="buy-tag">Shop Series →</div>
+            </div>
         </a>
 
         <a href="https://www.amazon.com/dp/B0GN28Q5HK" class="link-card mindful" target="_blank">
-            <h3>SUDOKU JOURNEY</h3>
-            <p>Finding, Knowing, Mastering Zen Series: Volume 1</p>
-            <div class="buy-tag">Start Your Journey →</div>
+            <img src="journey.jpg" alt="Sudoku Journey" class="book-thumb">
+            <div class="card-content">
+                <h3>SUDOKU JOURNEY</h3>
+                <p>Finding, Knowing, Mastering Zen Series: Volume 1</p>
+                <div class="buy-tag">Start Your Journey →</div>
+            </div>
         </a>
 
         <div class="section-header">Mindful Sanctuary & Recovery</div>
 
         <a href="https://www.amazon.com/dp/B0GS9SQK9L" class="link-card mindful" target="_blank">
-            <h3>Mindful Sanctuary: The Cryptogram Collection</h3>
-            <p>Engage your focus with challenging and serene cryptograms.</p>
-            <div class="buy-tag">Explore Collection →</div>
+            <img src="cryptogram.jpg" alt="Cryptograms" class="book-thumb">
+            <div class="card-content">
+                <h3>Mindful Sanctuary: The Cryptogram Collection</h3>
+                <p>Engage your focus with challenging and serene cryptograms.</p>
+                <div class="buy-tag">Explore Collection →</div>
+            </div>
         </a>
 
         <a href="https://www.amazon.com/dp/B0GPMZ1VQD" class="link-card mindful" target="_blank">
-            <h3>Mindful Sanctuary: Travel-Sized Activity Book</h3>
-            <p>A tranquil puzzle companion designed for mindful moments on the go.</p>
-            <div class="buy-tag">View Companion →</div>
+            <img src="travel-activity.jpg" alt="Activity Book" class="book-thumb">
+            <div class="card-content">
+                <h3>Mindful Sanctuary: Travel-Sized Activity Book</h3>
+                <p>A tranquil puzzle companion designed for mindful moments.</p>
+                <div class="buy-tag">View Companion →</div>
+            </div>
         </a>
 
         <a href="https://www.amazon.com/dp/B0GTGYYDB5" class="link-card recovery" target="_blank">
-            <h3>One Day at a Time: The Twelve Principles</h3>
-            <p>Recovery-Focused Word Search Puzzle Book.</p>
-            <div class="buy-tag">Shop Now →</div>
+            <img src="recovery.jpg" alt="Recovery Word Search" class="book-thumb">
+            <div class="card-content">
+                <h3>One Day at a Time: The Twelve Principles</h3>
+                <p>Recovery-Focused Word Search Puzzle Book.</p>
+                <div class="buy-tag">Shop Now →</div>
+            </div>
         </a>
 
         <div class="section-header">Stationery & Art</div>
 
         <a href="https://www.amazon.com/dp/B0GTBW9MMC" class="link-card odyssey" target="_blank">
-            <h3>Gridworx Odyssey Collection</h3>
-            <p>Artistic Wide Ruled Composition Stationery (5 Books)</p>
-            <div class="buy-tag">View Designs →</div>
+            <img src="odyssey.jpg" alt="Odyssey Collection" class="book-thumb">
+            <div class="card-content">
+                <h3>Gridworx Odyssey Collection</h3>
+                <p>Artistic Wide Ruled Composition Stationery (5 Books)</p>
+                <div class="buy-tag">View Designs →</div>
+            </div>
         </a>
 
     </div>
