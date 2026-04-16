@@ -4,172 +4,537 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gridworx Games | Official Book Links</title>
+    <link rel="icon" type="image/png" href="logoicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --bg: #0a0a0c;
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --bg-gradient: linear-gradient(135deg, #0a0a0c 0%, #1a1a2e 50%, #0f0f1e 100%);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(255, 255, 255, 0.08);
             --neon-blue: #00d2ff;
             --neon-purple: #9d50bb;
             --neon-gold: #f39c12;
             --neon-green: #2ecc71;
-            --text: #ffffff;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-blue: #0099cc;
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg);
-            background-image: radial-gradient(circle at 50% -20%, #1a1a2e, #0a0a0c);
-            color: var(--text);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            display: flex; flex-direction: column; align-items: center;
-            min-height: 100vh; padding: 10px 10px 40px 10px; /* Reduced padding for better fit */
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px 60px 20px;
+            overflow-x: hidden;
         }
 
-        .logo-container { margin-top: 20px; margin-bottom: 20px; text-align: center; }
-        
-        /* Fixed: Updated to Logo.png and made 25% smaller (240px) */
-        .logo-container img { 
-            max-width: 240px; 
-            height: auto; 
-            filter: drop-shadow(0 0 10px rgba(157, 80, 187, 0.3)); 
+        /* Header Section */
+        .header {
+            width: 100%;
+            max-width: 650px;
+            margin-bottom: 50px;
+            text-align: center;
         }
 
-        .container { width: 100%; max-width: 580px; display: flex; flex-direction: column; gap: 12px; }
+        .logo-container {
+            margin-bottom: 32px;
+            animation: fadeInDown 0.8s ease-out;
+        }
 
+        .logo-container img {
+            max-width: 280px;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 0 20px rgba(157, 80, 187, 0.25)) drop-shadow(0 0 40px rgba(0, 210, 255, 0.1));
+            transition: var(--transition);
+        }
+
+        .logo-container img:hover {
+            filter: drop-shadow(0 0 25px rgba(157, 80, 187, 0.4)) drop-shadow(0 0 50px rgba(0, 210, 255, 0.2));
+            transform: scale(1.02);
+        }
+
+        .header-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .header-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Main Container */
+        .container {
+            width: 100%;
+            max-width: 650px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        /* Section Header */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 32px 0 20px 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            font-weight: 600;
+            color: var(--neon-blue);
+        }
+
+        .section-header::before {
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-blue), transparent);
+            border-radius: 1px;
+        }
+
+        .section-header::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--card-border));
+            border-radius: 1px;
+        }
+
+        /* Link Cards */
         .link-card {
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 15px;
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 20px;
             text-decoration: none;
-            color: white;
-            transition: all 0.3s ease;
-            display: flex; 
-            flex-direction: row; 
-            align-items: center;
-            border-left: 5px solid transparent;
+            color: var(--text-primary);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 18px;
+            position: relative;
+            overflow: hidden;
+            min-height: 120px;
+            cursor: pointer;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--accent-color, var(--neon-blue)), transparent);
+            opacity: 0.6;
+            transition: var(--transition);
         }
 
         .link-card:hover {
-            transform: translateX(5px);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(var(--accent-rgb, 0, 210, 255), 0.1);
         }
 
+        .link-card:active {
+            transform: translateY(-2px);
+        }
+
+        /* Card Colors */
+        .sudoku-main { --accent-color: var(--neon-gold); --accent-rgb: 243, 156, 18; }
+        .sharp-minds { --accent-color: var(--neon-blue); --accent-rgb: 0, 210, 255; }
+        .odyssey { --accent-color: var(--neon-purple); --accent-rgb: 157, 80, 187; }
+        .mindful { --accent-color: var(--neon-green); --accent-rgb: 46, 204, 113; }
+        .recovery { --accent-color: #ff6b6b; --accent-rgb: 255, 107, 107; }
+
+        /* Book Thumbnail */
         .book-thumb {
-            width: 70px; /* Slightly smaller thumb for better fit */
-            height: 90px; 
+            width: 85px;
+            height: 115px;
             object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+            background-color: #1a1a1a;
+            flex-shrink: 0;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .link-card:hover .book-thumb {
+            transform: scale(1.05) rotateY(-8deg);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Card Content */
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 0;
+        }
+
+        .link-card h3 {
+            margin: 0 0 8px 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -0.3px;
+            transition: var(--transition);
+        }
+
+        .link-card:hover h3 {
+            color: var(--accent-color);
+        }
+
+        .link-card p {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            transition: var(--transition);
+        }
+
+        .link-card:hover p {
+            color: var(--text-primary);
+        }
+
+        /* Buy Tag / CTA */
+        .buy-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 6px 10px;
             border-radius: 4px;
-            margin-right: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-            background-color: #222;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            align-self: flex-start;
+            margin-top: auto;
         }
 
-        .card-content { flex: 1; }
-
-        .link-card h3 { margin: 0 0 3px 0; font-size: 1rem; letter-spacing: 0.5px; }
-        .link-card p { margin: 0; font-size: 0.8rem; opacity: 0.7; line-height: 1.3; }
-
-        .sudoku-main { border-left-color: var(--neon-gold); }
-        .sharp-minds { border-left-color: var(--neon-blue); }
-        .odyssey { border-left-color: var(--neon-purple); }
-        .mindful { border-left-color: var(--neon-green); }
-        .recovery { border-left-color: #e74c3c; }
-
-        .section-header {
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
-            margin: 20px 0 8px 5px; color: var(--neon-blue); opacity: 0.8;
+        .link-card:hover .buy-tag {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.2);
+            transform: translateX(2px);
         }
 
-        .buy-tag { font-size: 0.65rem; font-weight: bold; margin-top: 8px; color: var(--neon-gold); text-transform: uppercase; }
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            animation: fadeIn 1s ease-out 0.6s backwards;
+        }
 
-        footer { margin-top: 40px; text-align: center; font-size: 0.7rem; opacity: 0.5; }
+        footer a {
+            color: var(--neon-blue);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
 
-        /* Auto-Resize for Mobile Screens */
+        footer a:hover {
+            color: var(--neon-purple);
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            body {
+                padding: 30px 16px 50px 16px;
+            }
+
+            .header {
+                margin-bottom: 35px;
+            }
+
+            .header-title {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            .header-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .logo-container img {
+                max-width: 220px;
+            }
+
+            .link-card {
+                padding: 16px;
+                gap: 14px;
+                min-height: auto;
+            }
+
+            .book-thumb {
+                width: 75px;
+                height: 100px;
+            }
+
+            .link-card h3 {
+                font-size: 1rem;
+                margin-bottom: 6px;
+            }
+
+            .link-card p {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
+
+            .section-header {
+                margin: 24px 0 16px 0;
+                font-size: 0.8rem;
+                letter-spacing: 1.5px;
+            }
+
+            .buy-tag {
+                font-size: 0.7rem;
+                padding: 5px 8px;
+            }
+
+            footer {
+                margin-top: 40px;
+                font-size: 0.8rem;
+                padding-top: 20px;
+            }
+        }
+
         @media (max-width: 480px) {
-            .link-card { padding: 10px; }
-            .book-thumb { width: 60px; height: 75px; margin-right: 10px; }
-            .link-card h3 { font-size: 0.9rem; }
-            .logo-container img { max-width: 180px; }
+            body {
+                padding: 24px 14px 40px 14px;
+            }
+
+            .header-title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+
+            .header-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .logo-container img {
+                max-width: 180px;
+            }
+
+            .logo-container {
+                margin-bottom: 24px;
+            }
+
+            .container {
+                gap: 12px;
+            }
+
+            .link-card {
+                padding: 14px;
+                gap: 12px;
+            }
+
+            .book-thumb {
+                width: 65px;
+                height: 88px;
+            }
+
+            .link-card h3 {
+                font-size: 0.95rem;
+            }
+
+            .link-card p {
+                font-size: 0.8rem;
+            }
+
+            .section-header {
+                margin: 20px 0 14px 0;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .link-card {
+                page-break-inside: avoid;
+                border: 1px solid #ccc;
+                background: white;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="logo-container">
-        <img src="Logo.png" alt="Gridworx Games Logo">
+    <div class="header">
+        <div class="logo-container">
+            <img src="Logo.png" alt="Gridworx Games Logo">
+        </div>
+        <h1 class="header-title">Gridworx Games</h1>
+        <p class="header-subtitle">Premium Puzzle & Activity Books</p>
     </div>
 
     <div class="container">
         
         <div class="section-header">Puzzles & Brain Training</div>
 
-        <a href="https://www.amazon.com/-/he/Steven-Smith/dp/B0GNPNC63R" class="link-card sudoku-main" target="_blank">
+        <a href="https://www.amazon.com/-/he/Steven-Smith/dp/B0GNPNC63R" class="link-card sudoku-main" target="_blank" rel="noopener noreferrer">
             <img src="2026sudoku.jpg" alt="2026 Colossal Sudoku" class="book-thumb">
             <div class="card-content">
-                <h3>The 2026 Colossal Book of Sudoku</h3>
-                <p>Master Your Mind with 2,026+ Hand-Crafted Grids.</p>
+                <div>
+                    <h3>The 2026 Colossal Book of Sudoku</h3>
+                    <p>Master Your Mind with 2,026+ Hand-Crafted Grids.</p>
+                </div>
                 <div class="buy-tag">View on Amazon →</div>
             </div>
         </a>
 
-        <a href="https://www.amazon.com/dp/B0GHJG4JX2" class="link-card sharp-minds" target="_blank">
+        <a href="https://www.amazon.com/dp/B0GHJG4JX2" class="link-card sharp-minds" target="_blank" rel="noopener noreferrer">
             <img src="sharp-minds.jpg" alt="Sharp Minds" class="book-thumb">
             <div class="card-content">
-                <h3>Sudoku for Sharp Minds™</h3>
-                <p>Extra Large Print Collection (5 Books)</p>
+                <div>
+                    <h3>Sudoku for Sharp Minds™</h3>
+                    <p>Extra Large Print Collection (5 Books)</p>
+                </div>
                 <div class="buy-tag">Shop Series →</div>
             </div>
         </a>
 
-        <a href="https://www.amazon.com/dp/B0GN28Q5HK" class="link-card mindful" target="_blank">
+        <a href="https://www.amazon.com/dp/B0GN28Q5HK" class="link-card mindful" target="_blank" rel="noopener noreferrer">
             <img src="journey.jpg" alt="Sudoku Journey" class="book-thumb">
             <div class="card-content">
-                <h3>SUDOKU JOURNEY</h3>
-                <p>Zen Series: Volume 1</p>
+                <div>
+                    <h3>Sudoku Journey</h3>
+                    <p>Zen Series: Volume 1</p>
+                </div>
                 <div class="buy-tag">Start Your Journey →</div>
             </div>
         </a>
 
         <div class="section-header">Mindful Sanctuary & Recovery</div>
 
-        <a href="https://www.amazon.com/dp/B0GS9SQK9L" class="link-card mindful" target="_blank">
+        <a href="https://www.amazon.com/dp/B0GS9SQK9L" class="link-card mindful" target="_blank" rel="noopener noreferrer">
             <img src="cryptogram.jpg" alt="Cryptograms" class="book-thumb">
             <div class="card-content">
-                <h3>Mindful Sanctuary: Cryptograms</h3>
-                <p>Engage your focus with challenging serene puzzles.</p>
+                <div>
+                    <h3>Mindful Sanctuary: Cryptograms</h3>
+                    <p>Engage your focus with challenging serene puzzles.</p>
+                </div>
                 <div class="buy-tag">Explore Collection →</div>
             </div>
         </a>
 
-        <a href="https://www.amazon.com/dp/B0GPMZ1VQD" class="link-card mindful" target="_blank">
+        <a href="https://www.amazon.com/dp/B0GPMZ1VQD" class="link-card mindful" target="_blank" rel="noopener noreferrer">
             <img src="travel-activity.jpg" alt="Activity Book" class="book-thumb">
             <div class="card-content">
-                <h3>Mindful Sanctuary: Travel-Sized</h3>
-                <p>A tranquil puzzle companion for moments on the go.</p>
+                <div>
+                    <h3>Mindful Sanctuary: Travel-Sized</h3>
+                    <p>A tranquil puzzle companion for moments on the go.</p>
+                </div>
                 <div class="buy-tag">View Companion →</div>
             </div>
         </a>
 
-        <a href="https://www.amazon.com/dp/B0GTGYYDB5" class="link-card recovery" target="_blank">
+        <a href="https://www.amazon.com/dp/B0GTGYYDB5" class="link-card recovery" target="_blank" rel="noopener noreferrer">
             <img src="recovery.jpg" alt="Recovery Word Search" class="book-thumb">
             <div class="card-content">
-                <h3>One Day at a Time: Twelve Principles</h3>
-                <p>Recovery-Focused Word Search Puzzle Book.</p>
+                <div>
+                    <h3>One Day at a Time: Twelve Principles</h3>
+                    <p>Recovery-Focused Word Search Puzzle Book.</p>
+                </div>
                 <div class="buy-tag">Shop Now →</div>
             </div>
         </a>
 
         <div class="section-header">Stationery & Art</div>
 
-        <a href="https://www.amazon.com/dp/B0GTBW9MMC" class="link-card odyssey" target="_blank">
+        <a href="https://www.amazon.com/dp/B0GTBW9MMC" class="link-card odyssey" target="_blank" rel="noopener noreferrer">
             <img src="odyssey.jpg" alt="Odyssey Collection" class="book-thumb">
             <div class="card-content">
-                <h3>Gridworx Odyssey Collection</h3>
-                <p>Artistic Wide Ruled Composition Stationery.</p>
+                <div>
+                    <h3>Gridworx Odyssey Collection</h3>
+                    <p>Artistic Wide Ruled Composition Stationery.</p>
+                </div>
                 <div class="buy-tag">View Designs →</div>
             </div>
         </a>
@@ -177,7 +542,7 @@
     </div>
 
     <footer>
-        &copy; 2026 GRIDWORX GAMES | CARLSBAD, CA
+        &copy; 2026 <strong>Gridworx Games</strong> | Carlsbad, CA
     </footer>
 
 </body>
