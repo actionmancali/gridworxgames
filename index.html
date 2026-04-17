@@ -189,6 +189,7 @@
             border: none;
             gap: 6px;
             padding: 0;
+            z-index: 1001;
         }
 
         .hamburger span {
@@ -197,6 +198,7 @@
             background: var(--text-primary);
             border-radius: 2px;
             transition: var(--transition);
+            display: block;
         }
 
         .hamburger.active span:nth-child(1) {
@@ -449,6 +451,8 @@
             gap: 0;
             z-index: 999;
             animation: slideDown 0.3s ease-out;
+            max-height: 400px;
+            overflow-y: auto;
         }
 
         .mobile-menu.active {
@@ -461,6 +465,17 @@
             display: block;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             text-align: left;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu .nav-link:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
         }
 
         .mobile-menu .contact-btn {
@@ -468,6 +483,8 @@
             margin-left: 30px;
             width: calc(100% - 46px);
             text-align: center;
+            display: block;
+            padding: 10px 20px;
         }
 
         /* Animations */
@@ -705,7 +722,7 @@
 
         <a href="contact.html" class="contact-btn">Contact Us</a>
 
-        <button class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" type="button">
             <span></span>
             <span></span>
             <span></span>
@@ -821,9 +838,23 @@
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
+        if (hamburger) {
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+        }
 
-        // Close menu when link*
+        // Close menu when link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a, button');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
