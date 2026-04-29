@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>Contact Us | Gridworx Games</title>
-    <link rel="icon" type="image/png" href="logoicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <meta name="title" content="Contact Us | Gridworx Games">
+    <meta name="description" content="Get in touch with Gridworx Games. We'd love to hear from you about our puzzle books, bulk orders, or any questions you may have.">
+    <meta name="keywords" content="contact gridworx games, puzzle books contact, bulk orders, customer service">
+    <meta name="author" content="Gridworx Games">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gridworxgames.com/contact">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gridworxgames.com/contact">
+    <meta property="og:title" content="Contact Us | Gridworx Games">
+    <meta property="og:description" content="Get in touch with Gridworx Games. We'd love to hear from you about our puzzle books, bulk orders, or any questions you may have.">
+    <meta property="og:image" content="https://gridworxgames.com/Logo.png">
+    <meta property="og:site_name" content="Gridworx Games">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gridworxgames.com/contact">
+    <meta property="twitter:title" content="Contact Us | Gridworx Games">
+    <meta property="twitter:description" content="Get in touch with Gridworx Games. We'd love to hear from you about our puzzle books, bulk orders, or any questions you may have.">
+    <meta property="twitter:image" content="https://gridworxgames.com/Logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logoicon.png">
+    <link rel="apple-touch-icon" href="/logoicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Gridworx Games",
+      "description": "Contact page for Gridworx Games puzzle book publisher",
+      "url": "https://gridworxgames.com/contact",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Gridworx Games",
+        "url": "https://gridworxgames.com"
+      }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -15,19 +64,36 @@
         }
 
         :root {
-            --bg: #0a0a0c;
-            --bg-gradient: linear-gradient(135deg, #0a0a0c 0%, #1a1a2e 50%, #0f0f1e 100%);
-            --card-bg: rgba(255, 255, 255, 0.04);
-            --card-border: rgba(255, 255, 255, 0.08);
-            --neon-blue: #00d2ff;
-            --neon-purple: #9d50bb;
-            --neon-gold: #f39c12;
-            --neon-green: #2ecc71;
+            /* Color System */
+            --bg-dark: #0d0d12;
+            --bg-gradient: linear-gradient(160deg, #0d0d12 0%, #1a0f2e 40%, #0d1621 100%);
+            --surface: rgba(255, 255, 255, 0.03);
+            --surface-hover: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.1);
+            
+            /* Neon Color Palette */
+            --neon-cyan: #00ffff;
+            --neon-magenta: #ff00ff;
+            --neon-yellow: #ffff00;
+            --neon-green: #39ff14;
+            --electric-blue: #0066ff;
+            --hot-pink: #ff0080;
+            --neon-orange: #ff6600;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--electric-blue) 0%, var(--hot-pink) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 100%);
+            
+            /* Text */
             --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --accent-blue: #0099cc;
-            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-            --nav-bg: rgba(10, 10, 12, 0.95);
+            --text-secondary: #a8a8b8;
+            --text-muted: #6b6b7a;
+            
+            /* Spacing */
+            --nav-height: 75px;
+            
+            /* Animation */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         html {
@@ -38,171 +104,137 @@
             background: var(--bg-gradient);
             background-attachment: fixed;
             color: var(--text-primary);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            letter-spacing: 0.3px;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            padding-top: 70px;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation Bar */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 70px;
-            background: var(--nav-bg);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            height: var(--nav-height);
+            background: rgba(13, 13, 18, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 30px;
+            padding: 0 max(5vw, 20px);
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s var(--ease-out);
         }
 
-        .nav-logo {
+        nav.scrolled {
+            height: 65px;
+            background: rgba(13, 13, 18, 0.95);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-brand {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             text-decoration: none;
-            transition: var(--transition);
+            transition: transform 0.3s var(--ease-out);
         }
 
-        .nav-logo img {
-            height: 100px;
-            width: auto;
-            filter: drop-shadow(0 0 8px rgba(157, 80, 187, 0.2));
-            transition: var(--transition);
-        }
-
-        .nav-logo:hover img {
-            filter: drop-shadow(0 0 12px rgba(157, 80, 187, 0.4));
+        .nav-brand:hover {
             transform: scale(1.05);
         }
 
-        .nav-logo-text {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: none;
+        .nav-brand img {
+            height: 100px;
+            width: auto;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.3));
+            transition: all 0.3s var(--ease-out);
         }
 
-        /* Desktop Menu */
-        .nav-menu {
+        nav.scrolled .nav-brand img {
+            height: 85px;
+        }
+
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             list-style: none;
         }
 
-        .nav-item {
-            margin: 0;
-        }
-
         .nav-link {
-            display: inline-block;
-            padding: 8px 16px;
             color: var(--text-secondary);
             text-decoration: none;
+            padding: 10px 18px;
             font-size: 0.9rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            border-radius: 6px;
+            border-radius: 10px;
+            transition: all 0.3s var(--ease-out);
             position: relative;
+            letter-spacing: 0.3px;
         }
 
-        .nav-link::after {
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text-primary);
+            background: var(--surface);
+        }
+
+        .nav-link.active::before {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 6px;
             left: 50%;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
-            transition: var(--transition);
             transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
         }
 
-        .nav-link:hover {
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .nav-link:hover::after {
-            width: calc(100% - 32px);
-        }
-
-        .nav-link.active {
-            color: var(--neon-blue);
-        }
-
-        .nav-link.active::after {
-            width: calc(100% - 32px);
-        }
-
-        /* Contact Button */
-        .contact-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
+        .nav-cta {
+            padding: 10px 24px;
+            background: var(--gradient-primary);
             color: white;
             text-decoration: none;
-            font-size: 0.9rem;
+            border-radius: 10px;
             font-weight: 600;
+            font-size: 0.85rem;
             letter-spacing: 0.5px;
-            border-radius: 8px;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
             text-transform: uppercase;
-            margin-left: 16px;
+            transition: all 0.3s var(--ease-out);
+            box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3);
+            margin-left: 12px;
         }
 
-        .contact-btn:hover {
+        .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(0, 210, 255, 0.4);
+            box-shadow: 0 6px 30px rgba(0, 102, 255, 0.5);
         }
 
-        .contact-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Hamburger Menu */
         .hamburger {
             display: none;
             flex-direction: column;
-            cursor: pointer;
+            gap: 6px;
             background: none;
             border: none;
-            gap: 6px;
-            padding: 0;
-            z-index: 1001;
+            cursor: pointer;
+            padding: 8px;
         }
 
         .hamburger span {
-            width: 25px;
+            width: 26px;
             height: 3px;
             background: var(--text-primary);
             border-radius: 2px;
-            transition: var(--transition);
-            display: block;
+            transition: all 0.3s var(--ease-out);
         }
 
         .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
+            transform: rotate(45deg) translate(8px, 8px);
         }
 
         .hamburger.active span:nth-child(2) {
@@ -210,211 +242,23 @@
         }
 
         .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(8px, -8px);
         }
 
-        /* Header Section */
-        .header {
-            width: 100%;
-            max-width: 650px;
-            margin: 40px auto 50px;
-            text-align: center;
-            padding: 0 20px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        .header-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
-        }
-
-        .header-subtitle {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        /* Contact Form Container */
-        .contact-container {
-            width: 100%;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 0 20px 60px 20px;
-            animation: fadeInUp 0.8s ease-out 0.2s backwards;
-        }
-
-        .contact-form-wrapper {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-            letter-spacing: 0.3px;
-        }
-
-        .form-group label span {
-            color: var(--neon-gold);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 14px 16px;
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            letter-spacing: 0.3px;
-            transition: var(--transition);
-            outline: none;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 140px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .form-group textarea:focus {
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
-            color: white;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
-            text-transform: uppercase;
-            width: 100%;
-            margin-top: 12px;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(0, 210, 255, 0.4);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .form-info {
-            background: rgba(0, 210, 255, 0.1);
-            border-left: 3px solid var(--neon-blue);
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 32px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .form-info strong {
-            color: var(--neon-blue);
-        }
-
-        .success-message {
-            background: rgba(46, 204, 113, 0.1);
-            border-left: 3px solid var(--neon-green);
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 24px;
-            font-size: 0.95rem;
-            color: var(--neon-green);
-            display: none;
-            animation: slideDown 0.3s ease-out;
-        }
-
-        .success-message.show {
-            display: block;
-        }
-
-        .error-message {
-            background: rgba(255, 107, 107, 0.1);
-            border-left: 3px solid #ff6b6b;
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 24px;
-            font-size: 0.95rem;
-            color: #ff6b6b;
-            display: none;
-            animation: slideDown 0.3s ease-out;
-        }
-
-        .error-message.show {
-            display: block;
-        }
-
-        /* Mobile Menu */
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 70px;
+            top: var(--nav-height);
             left: 0;
             right: 0;
-            background: var(--nav-bg);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(13, 13, 18, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px;
             flex-direction: column;
-            gap: 0;
+            gap: 6px;
             z-index: 999;
-            animation: slideDown 0.3s ease-out;
-            max-height: 400px;
+            max-height: calc(100vh - var(--nav-height));
             overflow-y: auto;
         }
 
@@ -423,326 +267,357 @@
         }
 
         .mobile-menu .nav-link {
-            padding: 16px 30px;
-            border-radius: 0;
-            display: block;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
             text-align: left;
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
+            padding: 14px 18px;
         }
 
-        .mobile-menu .nav-link:hover {
-            background: rgba(255, 255, 255, 0.05);
+        .mobile-menu .nav-cta {
+            margin: 8px 0 0 0;
+            text-align: center;
+        }
+
+        /* Contact Hero */
+        .contact-hero {
+            padding: calc(var(--nav-height) + 40px) max(5vw, 20px) 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+            50% { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .contact-hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 6vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, var(--neon-cyan) 50%, var(--neon-magenta) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-hero p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px max(5vw, 20px);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* Contact Form */
+        .contact-form-wrapper {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .contact-form-wrapper h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, var(--neon-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
             color: var(--text-primary);
         }
 
-        .mobile-menu .contact-btn {
-            margin: 16px;
-            margin-left: 30px;
-            width: calc(100% - 46px);
-            text-align: center;
-            display: block;
-            padding: 10px 20px;
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 102, 255, 0.6);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .info-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .info-card:hover {
+            background: var(--surface-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .info-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .info-card h3 i {
+            color: var(--neon-cyan);
+            font-size: 1.6rem;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .info-card a {
+            color: var(--neon-cyan);
+            text-decoration: none;
+            transition: color 0.3s var(--ease-out);
+        }
+
+        .info-card a:hover {
+            color: var(--neon-magenta);
+        }
+
+        .social-links-large {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .social-link-large {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .social-link-large:hover {
+            background: var(--surface-hover);
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+            transform: translateY(-3px);
         }
 
         /* Footer */
         footer {
-            margin-top: 40px;
+            padding: 50px max(5vw, 20px) 32px;
             text-align: center;
-            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            letter-spacing: 0.5px;
-            padding: 30px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            animation: fadeIn 1s ease-out 0.6s backwards;
+            margin-bottom: 18px;
         }
 
-        footer a {
-            color: var(--neon-blue);
+        footer .social-links {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            margin-top: 18px;
+        }
+
+        footer .social-link {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: var(--transition);
-            font-weight: 500;
+            transition: all 0.3s var(--ease-out);
         }
 
-        footer a:hover {
-            color: var(--neon-purple);
-            text-decoration: underline;
+        footer .social-link:hover {
+            background: var(--surface-hover);
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+            transform: translateY(-3px);
         }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                padding: 0 20px;
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
             }
 
-            .nav-menu {
+            .contact-form-wrapper {
+                padding: 28px;
+            }
+
+            .info-card {
+                padding: 24px;
+            }
+
+            .nav-links,
+            .nav-cta {
                 display: none;
             }
 
             .hamburger {
                 display: flex;
             }
-
-            .contact-btn {
-                display: none;
-            }
-
-            .header {
-                margin: 30px auto 40px;
-            }
-
-            .header-title {
-                font-size: 1.8rem;
-            }
-
-            .contact-container {
-                padding: 0 16px 50px 16px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form-wrapper {
-                padding: 32px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding-top: 70px;
-            }
-
-            nav {
-                height: 65px;
-                padding: 0 16px;
-            }
-
-            .nav-logo img {
-                height: 90px;
-            }
-
-            .header-title {
-                font-size: 1.6rem;
-            }
-
-            .header-subtitle {
-                font-size: 0.9rem;
-            }
-
-            .contact-container {
-                padding: 0 16px 40px 16px;
-            }
-
-            .contact-form-wrapper {
-                padding: 28px;
-                border-radius: 12px;
-            }
-
-            .form-group {
-                margin-bottom: 20px;
-            }
-
-            .form-group input,
-            .form-group textarea {
-                padding: 12px 14px;
-                font-size: 0.9rem;
-            }
-
-            .form-group label {
-                font-size: 0.9rem;
-                margin-bottom: 6px;
-            }
-
-            .submit-btn {
-                padding: 12px 24px;
-                font-size: 0.95rem;
-            }
-
-            .mobile-menu .nav-link {
-                padding: 14px 20px;
-            }
-
-            .mobile-menu .contact-btn {
-                margin: 12px;
-                margin-left: 20px;
-                width: calc(100% - 40px);
-            }
-
-            footer {
-                font-size: 0.8rem;
-                padding: 20px 16px;
-            }
         }
 
         @media (max-width: 480px) {
-            nav {
-                height: 60px;
-                padding: 0 12px;
+            :root {
+                --nav-height: 65px;
             }
 
-            .nav-logo img {
+            nav {
+                padding: 0 14px;
+            }
+
+            .nav-brand img {
                 height: 80px;
             }
 
-            .hamburger span {
-                width: 22px;
-                height: 2.5px;
+            nav.scrolled .nav-brand img {
+                height: 68px;
             }
 
-            .header-title {
-                font-size: 1.4rem;
-                margin-bottom: 10px;
+            .contact-hero {
+                padding-top: calc(var(--nav-height) + 35px);
+                padding-bottom: 45px;
             }
 
-            .header-subtitle {
-                font-size: 0.8rem;
-            }
-
-            .header {
-                margin: 25px auto 35px;
-            }
-
-            .contact-container {
-                padding: 0 14px 35px 14px;
-            }
-
-            .contact-form-wrapper {
-                padding: 24px;
-            }
-
-            .form-group {
-                margin-bottom: 18px;
+            .contact-form-wrapper,
+            .info-card {
+                padding: 20px;
             }
 
             .form-group input,
-            .form-group textarea {
-                padding: 11px 12px;
-                font-size: 0.85rem;
-            }
-
-            .form-group label {
-                font-size: 0.85rem;
-            }
-
-            .form-group textarea {
-                min-height: 120px;
-            }
-
-            .form-row {
-                gap: 16px;
-            }
-
-            .submit-btn {
-                padding: 11px 20px;
-                font-size: 0.9rem;
-            }
-
-            .form-info {
-                font-size: 0.85rem;
-                padding: 12px;
-            }
-
-            .mobile-menu .nav-link {
+            .form-group textarea,
+            .form-group select {
                 padding: 12px 16px;
-            }
-
-            .mobile-menu .contact-btn {
-                margin: 10px;
-                margin-left: 16px;
-                width: calc(100% - 32px);
-            }
-
-            footer {
-                font-size: 0.75rem;
-                padding: 16px 12px;
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            body {
-                background: white;
-                color: black;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .contact-form-wrapper {
-                border: 1px solid #ccc;
-                background: white;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html" class="nav-logo">
-            <img src="Logo.png" alt="Gridworx Games Logo">
-            <span class="nav-logo-text">GRIDWORX</span>
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <a href="/" class="nav-brand" aria-label="Gridworx Games Home">
+            <img src="/Logo.png" alt="Gridworx Games Logo" width="100" height="auto">
         </a>
 
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="nav-link" target="_blank" rel="noopener noreferrer">Author Page</a></li>
-            <li class="nav-item"><a href="https://www.etsy.com/shop/GridworxGames?ref=seller-platform-mcnav" class="nav-link" target="_blank" rel="noopener noreferrer">Etsy Store</a></li>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="nav-link" target="_blank" rel="noopener noreferrer">Author</a></li>
+            <li><a href="https://www.etsy.com/shop/GridworxGames" class="nav-link" target="_blank" rel="noopener noreferrer">Etsy</a></li>
         </ul>
 
-        <a href="contact.html" class="contact-btn">Contact Us</a>
+        <a href="/contact" class="nav-cta active">Get in Touch</a>
 
-        <button class="hamburger" id="hamburger" type="button">
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -750,80 +625,144 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" class="nav-link">Home</a>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/" class="nav-link">Home</a>
         <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="nav-link" target="_blank" rel="noopener noreferrer">Author Page</a>
-        <a href="https://www.etsy.com/shop/GridworxGames?ref=seller-platform-mcnav" class="nav-link" target="_blank" rel="noopener noreferrer">Etsy Store</a>
-        <a href="contact.html" class="contact-btn">Contact Us</a>
+        <a href="https://www.etsy.com/shop/GridworxGames" class="nav-link" target="_blank" rel="noopener noreferrer">Etsy Store</a>
+        <a href="/contact" class="nav-cta active">Get in Touch</a>
     </div>
 
-    <!-- Header Section -->
-    <div class="header">
-        <h1 class="header-title">Get In Touch</h1>
-        <p class="header-subtitle">We'd love to hear from you</p>
-    </div>
-
-    <!-- Contact Form Container -->
-    <div class="contact-container">
-        <div class="contact-form-wrapper">
-            <div class="success-message" id="successMessage">
-                ✓ Thank you! Your message has been sent successfully. We'll get back to you soon!
-            </div>
-            <div class="error-message" id="errorMessage">
-                ✗ Oops! Something went wrong. Please try again or email us directly at gridworxgames@gmail.com
-            </div>
-
-            <div class="form-info">
-                <strong>Quick Response:</strong> We typically respond within 24 hours. For urgent inquiries, you can also reach us directly at <strong>gridworxgames@gmail.com</strong>
-            </div>
-
-            <form id="contactForm" action="https://formspree.io/f/mykleoew" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name <span>*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address <span>*</span></label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject <span>*</span></label>
-                    <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message <span>*</span></label>
-                    <textarea id="message" name="message" placeholder="Tell us your message..." required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
-            </form>
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get in Touch</h1>
+            <p>Have a question about our puzzle books? Interested in bulk orders? We'd love to hear from you!</p>
         </div>
-    </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Send Us a Message</h2>
+                <form action="https://formspree.io/f/mykleoew" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="bulk">Bulk Order</option>
+                            <option value="wholesale">Wholesale Partnership</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        Email Us
+                    </h3>
+                    <p>For general inquiries and customer support:</p>
+                    <p><a href="mailto:gridworxgames@gmail.com">gridworxgames@gmail.com</a></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        Location
+                    </h3>
+                    <p>Gridworx Games<br>
+                    Independent Publisher<br>
+                    Carlsbad, California</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        Shop Our Books
+                    </h3>
+                    <p>Find our complete collection on Amazon and Etsy:</p>
+                    <div class="social-links-large">
+                        <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="social-link-large" target="_blank" rel="noopener noreferrer" aria-label="Visit our Amazon Store">
+                            <i class="fab fa-amazon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.etsy.com/shop/GridworxGames" class="social-link-large" target="_blank" rel="noopener noreferrer" aria-label="Visit our Etsy Shop">
+                            <i class="fab fa-etsy" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        &copy; 2026 <strong>Gridworx Games</strong> | Carlsbad, CA
+        <p><strong>Gridworx Games</strong> &copy; 2026 | Independent Publisher | Carlsbad, California</p>
+        <div class="social-links">
+            <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Amazon Store">
+                <i class="fab fa-amazon" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.etsy.com/shop/GridworxGames" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Etsy Shop">
+                <i class="fab fa-etsy" aria-hidden="true"></i>
+            </a>
+            <a href="/contact" class="social-link" aria-label="Contact Us">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+        </div>
     </footer>
 
     <script>
-        // Hamburger Menu Toggle
+        // Navigation scroll effect
+        const nav = document.getElementById('mainNav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
         const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-        if (hamburger) {
-            hamburger.addEventListener('click', function(e) {
-                e.preventDefault();
-                hamburger.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-            });
-        }
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
 
-        // Close menu when link is clicked
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a, button');
-        mobileMenuLinks.forEach(link => {
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
