@@ -408,10 +408,10 @@
             line-height: 1.7;
         }
 
-        /* Book Grid */
+        /* Book Grid - All cards uniform size based on 5 columns */
         .book-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 32px;
             max-width: 1400px;
             margin: 0 auto;
@@ -564,16 +564,16 @@
 
         /* Responsive - Desktop and Large Tablets */
         @media (min-width: 769px) {
-            /* Force all cards same size in one row on desktop */
+            /* All cards same size - 5 equal columns */
             .book-grid {
-                grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+                grid-template-columns: repeat(5, 1fr);
             }
         }
 
         /* Responsive - Tablet */
         @media (max-width: 768px) and (min-width: 481px) {
             .book-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-template-columns: repeat(3, 1fr);
                 gap: 24px;
             }
             
