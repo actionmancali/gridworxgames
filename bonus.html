@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Gridworx Games | Bonus Puzzles</title>
-    <meta name="title" content="Gridworx Games | Bonus Puzzles">
+    <title>Free Puzzle Bonus | Gridworx Games</title>
+    <meta name="title" content="Free Puzzle Bonus | Gridworx Games">
     <meta name="description" content="Download your free bonus puzzle from Gridworx Games! Get exclusive sudoku puzzles, cryptograms, and activity sheets as a thank you for being part of our puzzle community.">
     <meta name="keywords" content="free puzzles, bonus sudoku, free cryptograms, printable puzzles, gridworx games bonus">
     <meta name="author" content="Gridworx Games">
@@ -18,7 +18,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gridworxgames.com/bonus">
-    <meta property="og:title" content="Gridworx Games | Bonus Puzzles">
+    <meta property="og:title" content="Free Puzzle Bonus | Gridworx Games">
     <meta property="og:description" content="Download your free bonus puzzle from Gridworx Games! Get exclusive sudoku puzzles, cryptograms, and activity sheets as a thank you for being part of our puzzle community.">
     <meta property="og:image" content="https://gridworxgames.com/Logo.png">
     <meta property="og:site_name" content="Gridworx Games">
@@ -26,7 +26,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gridworxgames.com/bonus">
-    <meta property="twitter:title" content="Gridworx Games | Bonus Puzzles">
+    <meta property="twitter:title" content="Free Puzzle Bonus | Gridworx Games">
     <meta property="twitter:description" content="Download your free bonus puzzle from Gridworx Games! Get exclusive sudoku puzzles, cryptograms, and activity sheets as a thank you for being part of our puzzle community.">
     <meta property="twitter:image" content="https://gridworxgames.com/Logo.png">
     
@@ -45,7 +45,7 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Bonus Puzzles",
+      "name": "Free Puzzle Bonus",
       "description": "Free bonus puzzles from Gridworx Games",
       "url": "https://gridworxgames.com/bonus",
       "publisher": {
@@ -83,7 +83,6 @@
             /* Gradients */
             --gradient-primary: linear-gradient(135deg, var(--electric-blue) 0%, var(--hot-pink) 100%);
             --gradient-accent: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 100%);
-            --gradient-bonus: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
             
             /* Text */
             --text-primary: #ffffff;
@@ -294,7 +293,7 @@
             transform: translateX(-50%);
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
             pointer-events: none;
             animation: pulse 8s ease-in-out infinite;
         }
@@ -321,7 +320,7 @@
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 600;
-            color: #ffd700;
+            color: var(--neon-cyan);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 24px;
@@ -333,7 +332,7 @@
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #fff 0%, #ffd700 50%, #ff8c00 100%);
+            background: linear-gradient(135deg, #fff 0%, var(--neon-cyan) 50%, var(--neon-magenta) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -344,6 +343,44 @@
             color: var(--text-secondary);
             margin-bottom: 32px;
             line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s var(--ease-out);
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 102, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--surface-hover);
+            border-color: var(--neon-cyan);
         }
 
         /* Bonus Section */
@@ -378,7 +415,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: var(--gradient-bonus);
+            background: var(--gradient-primary);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s var(--ease-out);
@@ -402,7 +439,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--gradient-bonus);
+            background: var(--gradient-primary);
             border-radius: 16px;
             font-size: 2rem;
             color: white;
@@ -425,7 +462,7 @@
             align-items: center;
             gap: 10px;
             padding: 14px 32px;
-            background: var(--gradient-bonus);
+            background: var(--gradient-primary);
             color: white;
             text-decoration: none;
             border-radius: 12px;
@@ -433,18 +470,18 @@
             font-weight: 600;
             letter-spacing: 0.3px;
             transition: all 0.3s var(--ease-out);
-            box-shadow: 0 8px 30px rgba(255, 140, 0, 0.4);
+            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
         }
 
         .bonus-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(255, 140, 0, 0.6);
+            box-shadow: 0 12px 40px rgba(0, 102, 255, 0.6);
         }
 
         /* Info Section */
         .info-section {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 60px;
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -475,6 +512,92 @@
 
         .info-section li {
             margin-bottom: 8px;
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .contact-form-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff 0%, var(--neon-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-form-section > p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 102, 255, 0.6);
         }
 
         /* Footer */
@@ -526,7 +649,8 @@
                 gap: 24px;
             }
 
-            .info-section {
+            .info-section,
+            .contact-form-section {
                 padding: 28px;
             }
 
@@ -566,8 +690,15 @@
                 padding: 24px;
             }
 
-            .info-section {
+            .info-section,
+            .contact-form-section {
                 padding: 20px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 12px 16px;
             }
         }
     </style>
@@ -612,6 +743,10 @@
             </span>
             <h1>Your Free Puzzle Bonus!</h1>
             <p>Thank you for being part of the Gridworx Games community! Download your exclusive bonus puzzles and activity sheets.</p>
+            <a href="/" class="btn btn-secondary">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                Back to Home
+            </a>
         </div>
     </section>
 
@@ -669,6 +804,30 @@
                 <li>Use as a sample before purchasing our full books</li>
             </ul>
             <p><strong>Enjoying these puzzles?</strong> Explore our complete collection on <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" target="_blank" rel="noopener noreferrer" style="color: var(--neon-cyan); text-decoration: none;">Amazon</a> for hundreds more hand-crafted puzzles!</p>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form-section">
+            <h2>Have Questions?</h2>
+            <p>Need help with your downloads or have feedback? Send us a quick message!</p>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
         </div>
     </section>
 
