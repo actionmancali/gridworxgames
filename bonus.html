@@ -514,8 +514,8 @@
             margin-bottom: 8px;
         }
 
-        /* Contact Form Section */
-        .contact-form-section {
+        /* Newsletter Section */
+        .newsletter-section {
             max-width: 800px;
             margin: 0 auto;
             background: var(--surface);
@@ -524,7 +524,7 @@
             padding: 40px;
         }
 
-        .contact-form-section h2 {
+        .newsletter-section h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             margin-bottom: 12px;
@@ -534,14 +534,14 @@
             background-clip: text;
         }
 
-        .contact-form-section > p {
+        .newsletter-section > p {
             color: var(--text-secondary);
             margin-bottom: 24px;
             line-height: 1.7;
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
@@ -552,9 +552,7 @@
             color: var(--text-primary);
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group input {
             width: 100%;
             padding: 14px 18px;
             background: rgba(255, 255, 255, 0.05);
@@ -566,17 +564,33 @@
             transition: all 0.3s var(--ease-out);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group input:focus {
             outline: none;
             border-color: var(--neon-cyan);
             background: rgba(255, 255, 255, 0.08);
         }
 
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--electric-blue);
+        }
+
+        .checkbox-group label {
+            flex: 1;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            cursor: pointer;
         }
 
         .form-submit {
@@ -595,9 +609,36 @@
             box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
         }
 
-        .form-submit:hover {
+        .form-submit:hover:not(:disabled) {
             transform: translateY(-3px);
             box-shadow: 0 12px 40px rgba(0, 102, 255, 0.6);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            padding: 20px;
+            background: rgba(57, 255, 20, 0.1);
+            border: 1px solid var(--neon-green);
+            border-radius: 12px;
+            color: var(--neon-green);
+            text-align: center;
+            margin-top: 20px;
+            animation: slideDown 0.5s var(--ease-out);
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Footer */
@@ -650,7 +691,7 @@
             }
 
             .info-section,
-            .contact-form-section {
+            .newsletter-section {
                 padding: 28px;
             }
 
@@ -691,13 +732,11 @@
             }
 
             .info-section,
-            .contact-form-section {
+            .newsletter-section {
                 padding: 20px;
             }
 
-            .form-group input,
-            .form-group textarea,
-            .form-group select {
+            .form-group input {
                 padding: 12px 16px;
             }
         }
@@ -806,11 +845,11 @@
             <p><strong>Enjoying these puzzles?</strong> Explore our complete collection on <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" target="_blank" rel="noopener noreferrer" style="color: var(--neon-cyan); text-decoration: none;">Amazon</a> for hundreds more hand-crafted puzzles!</p>
         </div>
 
-        <!-- Contact Form Section -->
-        <div class="contact-form-section">
-            <h2>Have Questions?</h2>
-            <p>Need help with your downloads or have feedback? Send us a quick message!</p>
-            <form action="https://formspree.io/f/mykleoew" method="POST" class="contact-form">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2>Stay Updated!</h2>
+            <p>Join our mailing list to receive updates about new puzzle releases, exclusive offers, and more free bonus content.</p>
+            <form id="newsletterForm" action="https://formspree.io/f/mykleoew" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -821,12 +860,17 @@
                     <input type="email" id="email" name="email" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I agree to receive emails from Gridworx Games about new puzzle releases, special offers, and bonus content. You can unsubscribe at any time.</label>
                 </div>
 
-                <button type="submit" class="form-submit">Send Message</button>
+                <button type="submit" class="form-submit" id="submitBtn">Join Our Mailing List</button>
+                
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <p><strong>Welcome aboard!</strong> You've successfully joined our mailing list. Check your email for a confirmation!</p>
+                </div>
             </form>
         </div>
     </section>
@@ -880,6 +924,52 @@
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
             });
+        });
+
+        // Handle newsletter form submission with AJAX to stay on page
+        const newsletterForm = document.getElementById('newsletterForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+
+        newsletterForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Joining...';
+            
+            // Get form data
+            const formData = new FormData(newsletterForm);
+            
+            try {
+                // Submit to Formspree
+                const response = await fetch(newsletterForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    successMessage.classList.add('show');
+                    newsletterForm.reset();
+                    
+                    // Hide success message after 8 seconds
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 8000);
+                } else {
+                    alert('Oops! There was a problem signing you up. Please try again or contact us directly.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem signing you up. Please try again or contact us directly.');
+            }
+            
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Join Our Mailing List';
         });
     </script>
 
