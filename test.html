@@ -47,7 +47,7 @@
             --text-muted: #6b6b7a;
             
             /* Spacing */
-            --nav-height: 80px;
+            --nav-height: 75px;
             
             /* Animation */
             --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -88,7 +88,7 @@
         }
 
         nav.scrolled {
-            height: 70px;
+            height: 65px;
             background: rgba(13, 13, 18, 0.95);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
@@ -106,28 +106,28 @@
         }
 
         .nav-brand img {
-            height: 110px;
+            height: 100px;
             width: auto;
             filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.3));
             transition: all 0.3s var(--ease-out);
         }
 
         nav.scrolled .nav-brand img {
-            height: 90px;
+            height: 85px;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             list-style: none;
         }
 
         .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
-            padding: 12px 20px;
-            font-size: 0.95rem;
+            padding: 10px 18px;
+            font-size: 0.9rem;
             font-weight: 500;
             border-radius: 10px;
             transition: all 0.3s var(--ease-out);
@@ -144,7 +144,7 @@
         .nav-link.active::before {
             content: '';
             position: absolute;
-            bottom: 8px;
+            bottom: 6px;
             left: 50%;
             transform: translateX(-50%);
             width: 4px;
@@ -154,18 +154,18 @@
         }
 
         .nav-cta {
-            padding: 12px 28px;
+            padding: 10px 24px;
             background: var(--gradient-primary);
             color: white;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 10px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             transition: all 0.3s var(--ease-out);
             box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3);
-            margin-left: 16px;
+            margin-left: 12px;
         }
 
         .nav-cta:hover {
@@ -184,7 +184,7 @@
         }
 
         .hamburger span {
-            width: 28px;
+            width: 26px;
             height: 3px;
             background: var(--text-primary);
             border-radius: 2px;
@@ -212,9 +212,9 @@
             background: rgba(13, 13, 18, 0.98);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
-            padding: 20px;
+            padding: 16px;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
             z-index: 999;
             max-height: calc(100vh - var(--nav-height));
             overflow-y: auto;
@@ -227,7 +227,7 @@
         .mobile-menu .nav-link {
             width: 100%;
             text-align: left;
-            padding: 16px 20px;
+            padding: 14px 18px;
         }
 
         .mobile-menu .nav-cta {
@@ -237,7 +237,7 @@
 
         /* Hero Section */
         .hero {
-            padding: calc(var(--nav-height) + 80px) max(5vw, 20px) 100px;
+            padding: calc(var(--nav-height) + 60px) max(5vw, 20px) 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -272,16 +272,16 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 20px;
+            padding: 8px 18px;
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--neon-cyan);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
             animation: slideDown 0.6s var(--ease-out);
         }
 
@@ -292,10 +292,10 @@
 
         .hero h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-size: clamp(2.2rem, 7vw, 4.5rem);
             font-weight: 800;
             line-height: 1.1;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             background: linear-gradient(135deg, #fff 0%, var(--neon-cyan) 50%, var(--neon-magenta) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -309,9 +309,9 @@
         }
 
         .hero p {
-            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             color: var(--text-secondary);
-            margin-bottom: 40px;
+            margin-bottom: 32px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
@@ -321,7 +321,7 @@
 
         .hero-buttons {
             display: flex;
-            gap: 16px;
+            gap: 14px;
             justify-content: center;
             flex-wrap: wrap;
             animation: slideUp 0.8s var(--ease-out) 0.6s backwards;
@@ -331,11 +331,11 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 16px 36px;
-            font-size: 1rem;
+            padding: 14px 32px;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 14px;
+            border-radius: 12px;
             transition: all 0.3s var(--ease-out);
             letter-spacing: 0.3px;
             cursor: pointer;
@@ -367,35 +367,35 @@
 
         /* Section Headers */
         .section {
-            padding: 80px max(5vw, 20px);
+            padding: 60px max(5vw, 20px);
             position: relative;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 48px;
         }
 
         .section-tag {
             display: inline-block;
-            padding: 8px 16px;
+            padding: 6px 14px;
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 8px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             color: var(--neon-magenta);
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .section-title {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(1.8rem, 5vw, 3rem);
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             background: linear-gradient(135deg, #fff 0%, var(--neon-cyan) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -403,18 +403,18 @@
         }
 
         .section-description {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         /* Book Grid - All cards uniform size, centered */
         .book-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 32px;
+            gap: 24px;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -422,8 +422,8 @@
         .book-card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 28px;
+            border-radius: 16px;
+            padding: 20px;
             text-decoration: none;
             color: var(--text-primary);
             transition: all 0.4s var(--ease-out);
@@ -431,7 +431,7 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         .book-card::before {
@@ -440,7 +440,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: var(--gradient-primary);
             transform: scaleX(0);
             transform-origin: left;
@@ -452,16 +452,16 @@
         }
 
         .book-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             background: var(--surface-hover);
             border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
         }
 
         .book-cover-wrapper {
             width: 100%;
             aspect-ratio: 3/4;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
             position: relative;
             background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(255, 0, 128, 0.1));
@@ -482,21 +482,21 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .book-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
             line-height: 1.3;
             margin: 0;
         }
 
         .book-description {
-            font-size: 0.95rem;
+            font-size: 0.875rem;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.5;
             flex: 1;
         }
 
@@ -504,10 +504,10 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: var(--neon-cyan);
-            margin-top: 8px;
+            margin-top: 6px;
             transition: gap 0.3s var(--ease-out);
         }
 
@@ -526,34 +526,34 @@
 
         /* Footer */
         footer {
-            padding: 60px max(5vw, 20px) 40px;
+            padding: 50px max(5vw, 20px) 32px;
             text-align: center;
             border-top: 1px solid var(--border);
-            margin-top: 80px;
+            margin-top: 60px;
         }
 
         footer p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         footer .social-links {
             display: flex;
-            gap: 16px;
+            gap: 14px;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 18px;
         }
 
         footer .social-link {
-            width: 44px;
-            height: 44px;
+            width: 42px;
+            height: 42px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 10px;
             color: var(--text-secondary);
             text-decoration: none;
             transition: all 0.3s var(--ease-out);
@@ -573,12 +573,12 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 32px;
+                gap: 24px;
             }
             
             .book-card {
-                flex: 0 0 calc(20% - 26px); /* 5 cards per row with gap */
-                max-width: calc(20% - 26px);
+                flex: 0 0 calc(20% - 20px); /* 5 cards per row with gap */
+                max-width: calc(20% - 20px);
             }
         }
 
@@ -588,12 +588,12 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 24px;
+                gap: 20px;
             }
             
             .book-card {
-                flex: 0 0 calc(33.333% - 16px); /* 3 cards per row */
-                max-width: calc(33.333% - 16px);
+                flex: 0 0 calc(33.333% - 14px); /* 3 cards per row */
+                max-width: calc(33.333% - 14px);
             }
             
             .nav-links,
@@ -606,16 +606,16 @@
             }
 
             .hero {
-                padding-top: calc(var(--nav-height) + 60px);
-                padding-bottom: 80px;
+                padding-top: calc(var(--nav-height) + 50px);
+                padding-bottom: 70px;
             }
 
             .section {
-                padding: 60px max(5vw, 20px);
+                padding: 50px max(5vw, 20px);
             }
 
             .section-header {
-                margin-bottom: 40px;
+                margin-bottom: 36px;
             }
 
             .hero-buttons {
@@ -631,19 +631,19 @@
         /* Responsive - Mobile */
         @media (max-width: 480px) {
             :root {
-                --nav-height: 70px;
+                --nav-height: 65px;
             }
 
             nav {
-                padding: 0 16px;
+                padding: 0 14px;
             }
 
             .nav-brand img {
-                height: 85px;
+                height: 80px;
             }
 
             nav.scrolled .nav-brand img {
-                height: 70px;
+                height: 68px;
             }
 
             .nav-links,
@@ -656,30 +656,34 @@
             }
 
             .hero {
-                padding-top: calc(var(--nav-height) + 60px);
-                padding-bottom: 80px;
+                padding-top: calc(var(--nav-height) + 50px);
+                padding-bottom: 60px;
             }
 
             .section {
-                padding: 60px max(5vw, 20px);
+                padding: 50px max(5vw, 20px);
             }
 
             .section-header {
-                margin-bottom: 40px;
+                margin-bottom: 32px;
             }
 
             /* Mobile: 1 card per row */
             .book-grid {
                 grid-template-columns: 1fr;
-                gap: 24px;
+                gap: 20px;
             }
 
             .book-card {
-                padding: 20px;
+                padding: 18px;
             }
 
             .book-title {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+            }
+
+            .book-description {
+                font-size: 0.85rem;
             }
 
             .hero-buttons {
@@ -762,7 +766,7 @@
                 <div class="book-info">
                     <h3 class="book-title">The 2026 Colossal Book of Sudoku</h3>
                     <p class="book-description">Master your mind with 2,026+ hand-crafted grids. The ultimate collection for serious solvers.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -773,7 +777,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Cryptograms</h3>
                     <p class="book-description">Engage your focus with challenging yet serene cryptogram puzzles.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -784,7 +788,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Travel-Sized</h3>
                     <p class="book-description">A tranquil puzzle companion perfect for moments of reflection on the go.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -795,7 +799,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Legends of Rock & Roll: 1970s, 80s & 90s</h3>
                     <p class="book-description">Complete collection featuring three decades of iconic rock and roll artists.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -806,7 +810,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 1</h3>
                     <p class="book-description">Easy & Medium Puzzles in extra large print - Perfect for building sudoku skills.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
         </div>
@@ -828,7 +832,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 1</h3>
                     <p class="book-description">Easy & Medium Puzzles - Perfect starting point for building sudoku skills.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -839,7 +843,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 2</h3>
                     <p class="book-description">Medium & Hard Puzzles - Advance your solving techniques and strategies.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -850,7 +854,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 3</h3>
                     <p class="book-description">Hard & Expert Puzzles - Challenge yourself with complex grids.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -861,7 +865,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 4</h3>
                     <p class="book-description">Expert & Diabolical Puzzles - For seasoned solvers seeking intense challenges.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -872,7 +876,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 5</h3>
                     <p class="book-description">Diabolical & Extreme Puzzles - The ultimate test for sudoku masters.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
         </div>
@@ -894,7 +898,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Cryptograms</h3>
                     <p class="book-description">Engage your focus with challenging yet serene cryptogram puzzles.</p>
-                    <span class="book-cta">Explore Collection <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -905,7 +909,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Travel-Sized</h3>
                     <p class="book-description">A tranquil puzzle companion perfect for moments of reflection on the go.</p>
-                    <span class="book-cta">View Companion <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -916,7 +920,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Sudoku Journey: Zen Series</h3>
                     <p class="book-description">Volume 1 of our tranquil puzzle series designed for mindful solving sessions.</p>
-                    <span class="book-cta">Start Your Journey <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -927,7 +931,7 @@
                 <div class="book-info">
                     <h3 class="book-title">One Day at a Time: Twelve Principles</h3>
                     <p class="book-description">Recovery-focused word search book supporting your journey with meaningful content.</p>
-                    <span class="book-cta">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
         </div>
@@ -949,7 +953,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Legends of Rock & Roll: 1970s, 80s & 90s</h3>
                     <p class="book-description">Complete collection featuring three decades of iconic rock and roll artists and bands.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -960,7 +964,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Rock and Roll Legends of the 1970s</h3>
                     <p class="book-description">Discover the greatest artists from the golden age of rock with classic 70s legends.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -971,7 +975,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Rock and Roll Legends of the 1980s</h3>
                     <p class="book-description">Relive the electric 80s era with word searches featuring decade-defining rock icons.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -982,7 +986,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Rock and Roll Legends of the 1990s</h3>
                     <p class="book-description">Explore grunge, alternative, and rock legends that defined the unforgettable 90s.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
         </div>
@@ -1004,7 +1008,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Paradise Found: Tropical Beach Day</h3>
                     <p class="book-description">Wide-ruled composition book featuring a stunning tropical beach paradise design.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -1015,7 +1019,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Mosaic Dragonfly</h3>
                     <p class="book-description">Artistic composition notebook with an intricate mosaic dragonfly design.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -1026,7 +1030,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Fantasy Dragon</h3>
                     <p class="book-description">Epic composition book featuring a majestic fantasy dragon illustration.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -1037,7 +1041,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Surfboard Beach</h3>
                     <p class="book-description">Coastal-inspired notebook perfect for students and surfers with tropical sunset vibes.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
@@ -1048,7 +1052,7 @@
                 <div class="book-info">
                     <h3 class="book-title">Worlds Collide: Sorcery & Spaceflight</h3>
                     <p class="book-description">Unique composition book blending fantasy magic with sci-fi spaceflight themes.</p>
-                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
         </div>
