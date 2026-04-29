@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Page Not Found | Gridworx Games</title>
+    <meta name="title" content="Page Not Found | Gridworx Games">
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Gridworx Games to explore our collection of premium puzzle books.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logoicon.png">
+    <link rel="apple-touch-icon" href="/logoicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0d0d12;
+            --bg-gradient: linear-gradient(160deg, #0d0d12 0%, #1a0f2e 40%, #0d1621 100%);
+            --surface: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --neon-cyan: #00ffff;
+            --neon-magenta: #ff00ff;
+            --electric-blue: #0066ff;
+            --hot-pink: #ff0080;
+            --gradient-primary: linear-gradient(135deg, var(--electric-blue) 0%, var(--hot-pink) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 100%);
+            --text-primary: #ffffff;
+            --text-secondary: #a8a8b8;
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            animation: pulse 8s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+            50% { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
+        }
+
+        .logo {
+            margin-bottom: 40px;
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.3));
+        }
+
+        .error-code {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(5rem, 15vw, 10rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .error-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s var(--ease-out);
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 102, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--neon-cyan);
+        }
+
+        .helpful-links {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .helpful-links h3 {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .links-list a {
+            color: var(--neon-cyan);
+            text-decoration: none;
+            transition: color 0.3s var(--ease-out);
+        }
+
+        .links-list a:hover {
+            color: var(--neon-magenta);
+        }
+
+        @media (max-width: 480px) {
+            .error-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .logo img {
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <div class="logo">
+            <a href="/">
+                <img src="/Logo.png" alt="Gridworx Games Logo">
+            </a>
+        </div>
+
+        <div class="error-code">404</div>
+        
+        <h1>Oops! Puzzle Not Found</h1>
+        
+        <p>The page you're looking for seems to have vanished like a solved sudoku grid. Let's get you back on track!</p>
+
+        <div class="error-buttons">
+            <a href="/" class="btn btn-primary">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                Back to Home
+            </a>
+            <a href="/contact" class="btn btn-secondary">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                Contact Us
+            </a>
+        </div>
+
+        <div class="helpful-links">
+            <h3>Popular Pages</h3>
+            <div class="links-list">
+                <a href="/">Browse Our Puzzle Books</a>
+                <a href="/bonus">Free Bonus Puzzles</a>
+                <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" target="_blank" rel="noopener noreferrer">Our Amazon Store</a>
+                <a href="https://www.etsy.com/shop/GridworxGames" target="_blank" rel="noopener noreferrer">Our Etsy Shop</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
