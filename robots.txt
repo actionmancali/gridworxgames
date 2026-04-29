@@ -1,6 +1,10 @@
-# Gridworx Games - Allow all crawlers
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-# Sitemap for search engines
+# Disallow specific paths
+Disallow: /downloads/
+Disallow: /404.html
+
+# Sitemap location
 Sitemap: https://gridworxgames.com/sitemap.xml
