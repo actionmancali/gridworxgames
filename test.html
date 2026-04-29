@@ -39,6 +39,7 @@
             --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
             --gradient-rock: linear-gradient(135deg, #ff0080 0%, #ff6600 100%);
             --gradient-sharp: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+            --gradient-bestseller: linear-gradient(135deg, #ffd700 0%, #ffaa00 50%, #ff6b6b 100%);
             
             /* Text */
             --text-primary: #ffffff;
@@ -515,6 +516,7 @@
         }
 
         /* Category Colors */
+        .book-card.category-bestseller::before { background: var(--gradient-bestseller); }
         .book-card.category-puzzles::before { background: var(--gradient-gold); }
         .book-card.category-mindful::before { background: linear-gradient(135deg, var(--neon-green) 0%, #00d4aa 100%); }
         .book-card.category-recovery::before { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); }
@@ -744,16 +746,16 @@
         </div>
     </section>
 
-    <!-- Puzzles Section -->
+    <!-- Bestsellers Section -->
     <section class="section">
         <div class="section-header">
-            <span class="section-tag">Puzzles & Brain Training</span>
-            <h2 class="section-title">Sharpen Your Mind</h2>
-            <p class="section-description">Premium sudoku collections and brain-training puzzles crafted for enthusiasts of all skill levels.</p>
+            <span class="section-tag">Customer Favorites</span>
+            <h2 class="section-title">Bestsellers</h2>
+            <p class="section-description">Our most popular titles loved by puzzle enthusiasts worldwide.</p>
         </div>
 
         <div class="book-grid">
-            <a href="https://www.amazon.com/-/he/Steven-Smith/dp/B0GNPNC63R" class="book-card category-puzzles" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.amazon.com/-/he/Steven-Smith/dp/B0GNPNC63R" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
                     <img src="2026sudoku.jpg" alt="2026 Colossal Sudoku" class="book-cover">
                 </div>
@@ -764,25 +766,47 @@
                 </div>
             </a>
 
-            <a href="https://www.amazon.com/dp/B0GHJG4JX2" class="book-card category-puzzles" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.amazon.com/dp/B0GS9SQK9L" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="sharp-minds.jpg" alt="Sharp Minds Series" class="book-cover">
+                    <img src="cryptogram.jpg" alt="Mindful Sanctuary Cryptograms" class="book-cover">
                 </div>
                 <div class="book-info">
-                    <h3 class="book-title">Sudoku for Sharp Minds™</h3>
-                    <p class="book-description">Extra large print collection featuring 5 volumes of engaging puzzles for maximum clarity.</p>
-                    <span class="book-cta">Shop Series <i class="fas fa-arrow-right"></i></span>
+                    <h3 class="book-title">Mindful Sanctuary: Cryptograms</h3>
+                    <p class="book-description">Engage your focus with challenging yet serene cryptogram puzzles.</p>
+                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
-            <a href="https://www.amazon.com/dp/B0GN28Q5HK" class="book-card category-puzzles" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.amazon.com/dp/B0GPMZ1VQD" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="journey.jpg" alt="Sudoku Journey" class="book-cover">
+                    <img src="travel-activity.jpg" alt="Travel-Sized Activity Book" class="book-cover">
                 </div>
                 <div class="book-info">
-                    <h3 class="book-title">Sudoku Journey: Zen Series</h3>
-                    <p class="book-description">Volume 1 of our tranquil puzzle series designed for mindful solving sessions.</p>
-                    <span class="book-cta">Start Your Journey <i class="fas fa-arrow-right"></i></span>
+                    <h3 class="book-title">Mindful Sanctuary: Travel-Sized</h3>
+                    <p class="book-description">A tranquil puzzle companion perfect for moments of reflection on the go.</p>
+                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0GCG6L42M" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
+                <div class="book-cover-wrapper">
+                    <img src="rock1.png" alt="Rock & Roll Legends Word Search" class="book-cover">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Legends of Rock & Roll: 1970s, 80s & 90s</h3>
+                    <p class="book-description">Complete collection featuring three decades of iconic rock and roll artists.</p>
+                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0GHJPX3JN" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
+                <div class="book-cover-wrapper">
+                    <img src="volume1.png" alt="Sharp Minds Volume 1" class="book-cover">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Sharp Minds: Volume 1</h3>
+                    <p class="book-description">Easy & Medium Puzzles in extra large print - Perfect for building sudoku skills.</p>
+                    <span class="book-cta">View on Amazon <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
         </div>
@@ -882,6 +906,17 @@
                     <h3 class="book-title">Mindful Sanctuary: Travel-Sized</h3>
                     <p class="book-description">A tranquil puzzle companion perfect for moments of reflection on the go.</p>
                     <span class="book-cta">View Companion <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0GN28Q5HK" class="book-card category-mindful" target="_blank" rel="noopener noreferrer">
+                <div class="book-cover-wrapper">
+                    <img src="journey.jpg" alt="Sudoku Journey" class="book-cover">
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Sudoku Journey: Zen Series</h3>
+                    <p class="book-description">Volume 1 of our tranquil puzzle series designed for mindful solving sessions.</p>
+                    <span class="book-cta">Start Your Journey <i class="fas fa-arrow-right"></i></span>
                 </div>
             </a>
 
