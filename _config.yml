@@ -1,0 +1,24 @@
+# Site Identity
+title: Gridworx Games
+description: Premium Crafted Puzzles & Activity Books
+author: Steven Smith
+
+# Theme (Optional: Choose a look for your site)
+# remote_theme: pages-themes/architect@v0.2.0
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files (Removed downloads/ from here)
+exclude:
+  - README.md
+  - .gitignore
+  - CNAME
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+
+# URL Structure
+permalink: pretty
