@@ -3,12 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gridworx Games | Independent Puzzle Publisher</title>
-    <meta name="description" content="Discover premium puzzle and activity books from Gridworx Games - an independent publisher creating engaging brain training experiences.">
-    <link rel="icon" type="image/png" href="logoicon.png">
+    
+    <!-- Primary Meta Tags -->
+    <title>Gridworx Games | Premium Precision-Engineered Puzzles & Activity Books</title>
+    <meta name="title" content="Gridworx Games | Premium Crafted Puzzles & Activity Books">
+    <meta name="description" content="Discover premium hand-crafted sudoku, cryptograms, word searches, and mindful activity books from Gridworx Games. Independent publisher creating engaging brain training puzzles for sharp minds.">
+    <meta name="keywords" content="sudoku books, cryptogram puzzles, word search books, activity books, puzzle books, brain training, mindfulness puzzles, composition notebooks, gridworx games, sharp minds sudoku">
+    <meta name="author" content="Gridworx Games">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://gridworxgames.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gridworxgames.com/">
+    <meta property="og:title" content="Gridworx Games | Premium Crafted Puzzles & Activity Books">
+    <meta property="og:description" content="Discover premium hand-crafted sudoku, cryptograms, word searches, and mindful activity books from Gridworx Games. Independent publisher creating engaging brain training puzzles for sharp minds.">
+    <meta property="og:image" content="https://gridworxgames.com/Logo.png">
+    <meta property="og:site_name" content="Gridworx Games">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gridworxgames.com/">
+    <meta property="twitter:title" content="Gridworx Games | Premium Crafted Puzzles & Activity Books">
+    <meta property="twitter:description" content="Discover premium hand-crafted sudoku, cryptograms, word searches, and mindful activity books from Gridworx Games. Independent publisher creating engaging brain training puzzles for sharp minds.">
+    <meta property="twitter:image" content="https://gridworxgames.com/Logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logoicon.png">
+    <link rel="apple-touch-icon" href="/logoicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Gridworx Games",
+      "description": "Independent publisher of premium puzzle and activity books",
+      "url": "https://gridworxgames.com",
+      "logo": "https://gridworxgames.com/Logo.png",
+      "foundingDate": "2024",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Carlsbad",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX",
+        "https://www.etsy.com/shop/GridworxGames"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://gridworxgames.com/contact"
+      }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -701,8 +760,8 @@
 
     <!-- Navigation -->
     <nav id="mainNav">
-        <a href="/" class="nav-brand">
-            <img src="Logo.png" alt="Gridworx Games">
+        <a href="/" class="nav-brand" aria-label="Gridworx Games Home">
+            <img src="/Logo.png" alt="Gridworx Games Logo" width="100" height="auto">
         </a>
 
         <ul class="nav-links">
@@ -713,7 +772,7 @@
 
         <a href="/contact" class="nav-cta">Get in Touch</a>
 
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -732,18 +791,18 @@
     <section class="hero">
         <div class="hero-content">
             <span class="hero-badge">
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
                 Independent Publisher
             </span>
             <h1>Premium Puzzle Books That Challenge & Inspire</h1>
             <p>Discover our curated collection of hand-crafted sudoku, cryptograms, and mindful activity books designed for sharp minds and creative souls.</p>
             <div class="hero-buttons">
                 <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-book"></i>
+                    <i class="fas fa-book" aria-hidden="true"></i>
                     Browse Our Catalog
                 </a>
                 <a href="/contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                     Contact Us
                 </a>
             </div>
@@ -751,7 +810,7 @@
     </section>
 
     <!-- Bestsellers Section -->
-    <section class="section">
+    <section class="section" id="bestsellers">
         <div class="section-header">
             <span class="section-tag">Customer Favorites</span>
             <h2 class="section-title">Bestsellers</h2>
@@ -761,63 +820,63 @@
         <div class="book-grid">
             <a href="https://www.amazon.com/-/he/Steven-Smith/dp/B0GNPNC63R" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="2026sudoku.jpg" alt="2026 Colossal Sudoku" class="book-cover">
+                    <img src="/2026sudoku.jpg" alt="2026 Colossal Book of Sudoku Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">The 2026 Colossal Book of Sudoku</h3>
                     <p class="book-description">Master your mind with 2,026+ hand-crafted grids. The ultimate collection for serious solvers.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GS9SQK9L" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="cryptogram.jpg" alt="Mindful Sanctuary Cryptograms" class="book-cover">
+                    <img src="/cryptogram.jpg" alt="Mindful Sanctuary Cryptograms Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Cryptograms</h3>
                     <p class="book-description">Engage your focus with challenging yet serene cryptogram puzzles.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GPMZ1VQD" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="travel-activity.jpg" alt="Travel-Sized Activity Book" class="book-cover">
+                    <img src="/travel-activity.jpg" alt="Mindful Sanctuary Travel-Sized Activity Book Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Travel-Sized</h3>
                     <p class="book-description">A tranquil puzzle companion perfect for moments of reflection on the go.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GCG6L42M" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="rock1.png" alt="Rock & Roll Legends Word Search" class="book-cover">
+                    <img src="/rock1.png" alt="Legends of Rock & Roll Word Search Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Legends of Rock & Roll: 1970s, 80s & 90s</h3>
                     <p class="book-description">Complete collection featuring three decades of iconic rock and roll artists.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GHJPX3JN" class="book-card category-bestseller" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="volume1.png" alt="Sharp Minds Volume 1" class="book-cover">
+                    <img src="/volume1.png" alt="Sharp Minds Volume 1 Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 1</h3>
                     <p class="book-description">Easy & Medium Puzzles in extra large print - Perfect for building sudoku skills.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
         </div>
     </section>
 
     <!-- Sharp Minds Series Section -->
-    <section class="section">
+    <section class="section" id="sharp-minds">
         <div class="section-header">
             <span class="section-tag">Extra Large Print Series</span>
             <h2 class="section-title">Sharp Minds Complete Collection</h2>
@@ -827,63 +886,63 @@
         <div class="book-grid">
             <a href="https://www.amazon.com/dp/B0GHJPX3JN" class="book-card category-sharp" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="volume1.png" alt="Sharp Minds Volume 1" class="book-cover">
+                    <img src="/volume1.png" alt="Sharp Minds Volume 1 Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 1</h3>
                     <p class="book-description">Easy & Medium Puzzles - Perfect starting point for building sudoku skills.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GKNG5VYS" class="book-card category-sharp" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="volume2.png" alt="Sharp Minds Volume 2" class="book-cover">
+                    <img src="/volume2.png" alt="Sharp Minds Volume 2 Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 2</h3>
                     <p class="book-description">Medium & Hard Puzzles - Advance your solving techniques and strategies.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GKXQDX8W" class="book-card category-sharp" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="volume3.png" alt="Sharp Minds Volume 3" class="book-cover">
+                    <img src="/volume3.png" alt="Sharp Minds Volume 3 Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 3</h3>
                     <p class="book-description">Hard & Expert Puzzles - Challenge yourself with complex grids.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GKYP8PZD" class="book-card category-sharp" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="volume4.png" alt="Sharp Minds Volume 4" class="book-cover">
+                    <img src="/volume4.png" alt="Sharp Minds Volume 4 Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 4</h3>
                     <p class="book-description">Expert & Diabolical Puzzles - For seasoned solvers seeking intense challenges.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GKYFV8R6" class="book-card category-sharp" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="volume5.png" alt="Sharp Minds Volume 5" class="book-cover">
+                    <img src="/volume5.png" alt="Sharp Minds Volume 5 Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Sharp Minds: Volume 5</h3>
                     <p class="book-description">Diabolical & Extreme Puzzles - The ultimate test for sudoku masters.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
         </div>
     </section>
 
     <!-- Mindful Section -->
-    <section class="section">
+    <section class="section" id="mindful">
         <div class="section-header">
             <span class="section-tag">Mindfulness & Recovery</span>
             <h2 class="section-title">Find Your Sanctuary</h2>
@@ -893,52 +952,52 @@
         <div class="book-grid">
             <a href="https://www.amazon.com/dp/B0GS9SQK9L" class="book-card category-mindful" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="cryptogram.jpg" alt="Mindful Sanctuary Cryptograms" class="book-cover">
+                    <img src="/cryptogram.jpg" alt="Mindful Sanctuary Cryptograms Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Cryptograms</h3>
                     <p class="book-description">Engage your focus with challenging yet serene cryptogram puzzles.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GPMZ1VQD" class="book-card category-mindful" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="travel-activity.jpg" alt="Travel-Sized Activity Book" class="book-cover">
+                    <img src="/travel-activity.jpg" alt="Mindful Sanctuary Travel-Sized Activity Book Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Mindful Sanctuary: Travel-Sized</h3>
                     <p class="book-description">A tranquil puzzle companion perfect for moments of reflection on the go.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GN28Q5HK" class="book-card category-mindful" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="journey.jpg" alt="Sudoku Journey" class="book-cover">
+                    <img src="/journey.jpg" alt="Sudoku Journey Zen Series Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Sudoku Journey: Zen Series</h3>
                     <p class="book-description">Volume 1 of our tranquil puzzle series designed for mindful solving sessions.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GTGYYDB5" class="book-card category-recovery" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="recovery.jpg" alt="Recovery Word Search" class="book-cover">
+                    <img src="/recovery.jpg" alt="One Day at a Time Recovery Word Search Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">One Day at a Time: Twelve Principles</h3>
                     <p class="book-description">Recovery-focused word search book supporting your journey with meaningful content.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
         </div>
     </section>
 
     <!-- Word Search Section -->
-    <section class="section">
+    <section class="section" id="word-search">
         <div class="section-header">
             <span class="section-tag">Word Search Puzzles</span>
             <h2 class="section-title">Rock & Roll Legends</h2>
@@ -948,52 +1007,52 @@
         <div class="book-grid">
             <a href="https://www.amazon.com/dp/B0GCG6L42M" class="book-card category-wordsearch" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="rock1.png" alt="Rock & Roll Legends Word Search" class="book-cover">
+                    <img src="/rock1.png" alt="Legends of Rock & Roll Word Search Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Legends of Rock & Roll: 1970s, 80s & 90s</h3>
                     <p class="book-description">Complete collection featuring three decades of iconic rock and roll artists and bands.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GQPRNNN2" class="book-card category-wordsearch" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="rock2.png" alt="Rock Legends 1970s" class="book-cover">
+                    <img src="/rock2.png" alt="Rock and Roll Legends of the 1970s Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Rock and Roll Legends of the 1970s</h3>
                     <p class="book-description">Discover the greatest artists from the golden age of rock with classic 70s legends.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GQSRV24Z" class="book-card category-wordsearch" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="rock3.png" alt="Rock Legends 1980s" class="book-cover">
+                    <img src="/rock3.png" alt="Rock and Roll Legends of the 1980s Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Rock and Roll Legends of the 1980s</h3>
                     <p class="book-description">Relive the electric 80s era with word searches featuring decade-defining rock icons.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/dp/B0GRG7759S" class="book-card category-wordsearch" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="rock4.png" alt="Rock Legends 1990s" class="book-cover">
+                    <img src="/rock4.png" alt="Rock and Roll Legends of the 1990s Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Rock and Roll Legends of the 1990s</h3>
                     <p class="book-description">Explore grunge, alternative, and rock legends that defined the unforgettable 90s.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
         </div>
     </section>
 
     <!-- Stationery Section -->
-    <section class="section">
+    <section class="section" id="stationery">
         <div class="section-header">
             <span class="section-tag">Stationery & Design</span>
             <h2 class="section-title">Creative Expression</h2>
@@ -1003,56 +1062,56 @@
         <div class="book-grid">
             <a href="https://www.amazon.com/gp/product/B0GTHTN446" class="book-card category-stationery" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="paradise.png" alt="Paradise Found Composition Book" class="book-cover">
+                    <img src="/paradise.png" alt="Paradise Found Tropical Beach Day Composition Book Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Paradise Found: Tropical Beach Day</h3>
                     <p class="book-description">Wide-ruled composition book featuring a stunning tropical beach paradise design.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/gp/product/B0GT928HR8" class="book-card category-stationery" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="dragonfly.png" alt="Mosaic Dragonfly Composition Book" class="book-cover">
+                    <img src="/dragonfly.png" alt="Mosaic Dragonfly Composition Book Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Mosaic Dragonfly</h3>
                     <p class="book-description">Artistic composition notebook with an intricate mosaic dragonfly design.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/gp/product/B0GT9H65LH" class="book-card category-stationery" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="fantasy.png" alt="Fantasy Dragon Composition Book" class="book-cover">
+                    <img src="/fantasy.png" alt="Fantasy Dragon Composition Book Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Fantasy Dragon</h3>
                     <p class="book-description">Epic composition book featuring a majestic fantasy dragon illustration.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/gp/product/B0GT93TRWX" class="book-card category-stationery" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="surfboard.png" alt="Surfboard Beach Composition Book" class="book-cover">
+                    <img src="/surfboard.png" alt="Surfboard Beach Composition Book Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Surfboard Beach</h3>
                     <p class="book-description">Coastal-inspired notebook perfect for students and surfers with tropical sunset vibes.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
 
             <a href="https://www.amazon.com/gp/product/B0GTDKRF89" class="book-card category-stationery" target="_blank" rel="noopener noreferrer">
                 <div class="book-cover-wrapper">
-                    <img src="worlds.png" alt="Worlds Collide Composition Book" class="book-cover">
+                    <img src="/worlds.png" alt="Worlds Collide Sorcery & Spaceflight Composition Book Cover" class="book-cover" loading="lazy">
                 </div>
                 <div class="book-info">
                     <h3 class="book-title">Worlds Collide: Sorcery & Spaceflight</h3>
                     <p class="book-description">Unique composition book blending fantasy magic with sci-fi spaceflight themes.</p>
-                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right"></i></span>
+                    <span class="book-cta">Buy Now on Amazon <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </div>
             </a>
         </div>
@@ -1062,14 +1121,14 @@
     <footer>
         <p><strong>Gridworx Games</strong> &copy; 2026 | Independent Publisher | Carlsbad, California</p>
         <div class="social-links">
-            <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Amazon">
-                <i class="fab fa-amazon"></i>
+            <a href="https://www.amazon.com/stores/Steven-Smith/author/B0GKJV96JX" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Amazon Store">
+                <i class="fab fa-amazon" aria-hidden="true"></i>
             </a>
-            <a href="https://www.etsy.com/shop/GridworxGames" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Etsy">
-                <i class="fab fa-etsy"></i>
+            <a href="https://www.etsy.com/shop/GridworxGames" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Etsy Shop">
+                <i class="fab fa-etsy" aria-hidden="true"></i>
             </a>
-            <a href="/contact" class="social-link" aria-label="Contact">
-                <i class="fas fa-envelope"></i>
+            <a href="/contact" class="social-link" aria-label="Contact Us">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
         </div>
     </footer>
