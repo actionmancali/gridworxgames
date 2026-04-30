@@ -111,6 +111,37 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* ===== FLOATING PUZZLE BACKGROUND WITH SUBTLE COLORFUL GLOWS ===== */
+        .puzzle-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+            background: var(--bg-gradient);
+        }
+
+        .puzzle-bg span {
+            position: absolute;
+            bottom: -140px;
+            font-size: 62px;
+            animation: floatPuzzle linear infinite;
+            font-weight: 700;
+        }
+
+        @keyframes floatPuzzle {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% {
+                transform: translateY(-120vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
         /* Navigation */
         nav {
             position: fixed;
@@ -744,6 +775,9 @@
 </head>
 <body>
 
+    <!-- Floating Puzzle Background -->
+    <div class="puzzle-bg" id="puzzleBg"></div>
+
     <!-- Navigation -->
     <nav id="mainNav">
         <a href="/" class="nav-brand" aria-label="Gridworx Games Home">
@@ -849,7 +883,7 @@
         <div class="newsletter-section">
             <h2>Stay Updated!</h2>
             <p>Join our mailing list to receive updates about new puzzle releases, exclusive offers, and more free bonus content.</p>
-            <form id="newsletterForm" action="https://formspree.io/f/mykleoew" method="POST">
+            <form id="newsletterForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -970,6 +1004,73 @@
             // Re-enable submit button
             submitBtn.disabled = false;
             submitBtn.textContent = 'Join Our Mailing List';
+        });
+
+        // Floating Puzzle Background with SUBTLE Colorful Glows (Mobile Optimized)
+        const puzzleBg = document.getElementById("puzzleBg");
+
+        // Color palette matching your theme (MORE SUBTLE - reduced opacity and softer glow)
+        const colorGlows = [
+            { color: 'rgba(0, 102, 255, 0.25)', shadow: '0 0 10px rgba(0, 102, 255, 0.3), 0 0 20px rgba(255, 0, 128, 0.2)' }, // Blue/Pink
+            { color: 'rgba(0, 255, 255, 0.25)', shadow: '0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(255, 0, 255, 0.2)' }, // Cyan/Magenta
+            { color: 'rgba(57, 255, 20, 0.25)', shadow: '0 0 10px rgba(57, 255, 20, 0.3), 0 0 20px rgba(0, 255, 255, 0.2)' }, // Green/Cyan
+            { color: 'rgba(255, 0, 128, 0.25)', shadow: '0 0 10px rgba(255, 0, 128, 0.3), 0 0 20px rgba(255, 0, 255, 0.2)' }, // Pink/Magenta
+            { color: 'rgba(0, 102, 255, 0.25)', shadow: '0 0 10px rgba(0, 102, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.2)' }, // Blue/Cyan
+            { color: 'rgba(255, 102, 0, 0.25)', shadow: '0 0 10px rgba(255, 102, 0, 0.3), 0 0 20px rgba(255, 0, 128, 0.2)' }, // Orange/Pink
+            { color: 'rgba(0, 255, 255, 0.2)', shadow: '0 0 10px rgba(0, 255, 255, 0.25), 0 0 20px rgba(57, 255, 20, 0.2)' }, // Cyan/Green
+            { color: 'rgba(255, 0, 255, 0.2)', shadow: '0 0 10px rgba(255, 0, 255, 0.25), 0 0 20px rgba(0, 102, 255, 0.2)' }, // Magenta/Blue
+        ];
+
+        // Detect if mobile device
+        const isMobile = window.innerWidth <= 768;
+
+        /* 🔻 Adjust quantity based on device - fewer on mobile */
+        const puzzlePieces = Array(isMobile ? 8 : 15).fill("🧩"); // Mobile: 8, Desktop: 15
+
+        /* 🔺 Adjust variety based on device - less on mobile */
+        const otherItemsFull = [
+            "!", "?", "#", "X", "A", "Z", "1", "3", "7", "5",
+            "J", "Z", "9", "0", "Q", "V", "F", "@", "#",
+            "▦", "▦", "□", "◆", "◇", "+", "!"
+        ];
+        
+        // On mobile, use fewer items
+        const otherItems = isMobile ? otherItemsFull.slice(0, 12) : otherItemsFull;
+
+        const allItems = [...puzzlePieces, ...otherItems];
+
+        /* 🔀 Shuffle for full randomness */
+        for (let i = allItems.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [allItems[i], allItems[j]] = [allItems[j], allItems[i]];
+        }
+
+        /* 🎯 Generate elements with subtle colorful glows - MOBILE OPTIMIZED SIZES */
+        allItems.forEach((item) => {
+            const span = document.createElement("span");
+            span.textContent = item;
+
+            const left = Math.random() * 100;
+            
+            // Smaller sizes on mobile: 30-45px instead of 58-80px
+            const size = isMobile 
+                ? Math.random() * 15 + 30  // Mobile: 30-45px
+                : Math.random() * 22 + 58; // Desktop: 58-80px
+            
+            const duration = Math.random() * 26 + 38;
+            const delay = Math.random() * -60;
+            
+            // Pick a random color/glow combination
+            const randomGlow = colorGlows[Math.floor(Math.random() * colorGlows.length)];
+
+            span.style.left = `${left}%`;
+            span.style.fontSize = `${size}px`;
+            span.style.animationDuration = `${duration}s`;
+            span.style.animationDelay = `${delay}s`;
+            span.style.color = randomGlow.color;
+            span.style.textShadow = randomGlow.shadow;
+
+            puzzleBg.appendChild(span);
         });
     </script>
 
