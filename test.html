@@ -111,7 +111,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ===== FLOATING PUZZLE BACKGROUND ===== */
+        /* ===== FLOATING PUZZLE BACKGROUND WITH SUBTLE COLORFUL GLOWS ===== */
         .puzzle-bg {
             position: fixed;
             inset: 0;
@@ -124,10 +124,9 @@
         .puzzle-bg span {
             position: absolute;
             bottom: -140px;
-            color: rgba(0, 196, 180, 0.06);
             font-size: 62px;
             animation: floatPuzzle linear infinite;
-            text-shadow: 0 0 12px rgba(0, 196, 180, 0.14);
+            font-weight: 700;
         }
 
         @keyframes floatPuzzle {
@@ -1007,13 +1006,25 @@
             submitBtn.textContent = 'Join Our Mailing List';
         });
 
-        // Floating Puzzle Background Script
+        // Floating Puzzle Background with SUBTLE Colorful Glows
         const puzzleBg = document.getElementById("puzzleBg");
 
-        /* 🔻 Reduced puzzle pieces (~30% less from previous 22 → ~15) */
+        // Color palette matching your theme (MORE SUBTLE - reduced opacity and softer glow)
+        const colorGlows = [
+            { color: 'rgba(0, 102, 255, 0.25)', shadow: '0 0 10px rgba(0, 102, 255, 0.3), 0 0 20px rgba(255, 0, 128, 0.2)' }, // Blue/Pink
+            { color: 'rgba(0, 255, 255, 0.25)', shadow: '0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(255, 0, 255, 0.2)' }, // Cyan/Magenta
+            { color: 'rgba(57, 255, 20, 0.25)', shadow: '0 0 10px rgba(57, 255, 20, 0.3), 0 0 20px rgba(0, 255, 255, 0.2)' }, // Green/Cyan
+            { color: 'rgba(255, 0, 128, 0.25)', shadow: '0 0 10px rgba(255, 0, 128, 0.3), 0 0 20px rgba(255, 0, 255, 0.2)' }, // Pink/Magenta
+            { color: 'rgba(0, 102, 255, 0.25)', shadow: '0 0 10px rgba(0, 102, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.2)' }, // Blue/Cyan
+            { color: 'rgba(255, 102, 0, 0.25)', shadow: '0 0 10px rgba(255, 102, 0, 0.3), 0 0 20px rgba(255, 0, 128, 0.2)' }, // Orange/Pink
+            { color: 'rgba(0, 255, 255, 0.2)', shadow: '0 0 10px rgba(0, 255, 255, 0.25), 0 0 20px rgba(57, 255, 20, 0.2)' }, // Cyan/Green
+            { color: 'rgba(255, 0, 255, 0.2)', shadow: '0 0 10px rgba(255, 0, 255, 0.25), 0 0 20px rgba(0, 102, 255, 0.2)' }, // Magenta/Blue
+        ];
+
+        /* 🔻 Reduced puzzle pieces (~30% less from 22 → ~15) */
         const puzzlePieces = Array(15).fill("🧩");
 
-        /* 🔺 Increased others (~20% more + added variety) */
+        /* 🔺 Original variety of items */
         const otherItems = [
             "!", "?", "#", "X", "A", "Z", "1", "3", "7", "5",
             "J", "Z", "9", "0", "Q", "V", "F", "@", "#",
@@ -1028,7 +1039,7 @@
             [allItems[i], allItems[j]] = [allItems[j], allItems[i]];
         }
 
-        /* 🎯 Generate elements */
+        /* 🎯 Generate elements with subtle colorful glows */
         allItems.forEach((item) => {
             const span = document.createElement("span");
             span.textContent = item;
@@ -1037,11 +1048,16 @@
             const size = Math.random() * 22 + 58;
             const duration = Math.random() * 26 + 38;
             const delay = Math.random() * -60;
+            
+            // Pick a random color/glow combination
+            const randomGlow = colorGlows[Math.floor(Math.random() * colorGlows.length)];
 
             span.style.left = `${left}%`;
             span.style.fontSize = `${size}px`;
             span.style.animationDuration = `${duration}s`;
             span.style.animationDelay = `${delay}s`;
+            span.style.color = randomGlow.color;
+            span.style.textShadow = randomGlow.shadow;
 
             puzzleBg.appendChild(span);
         });
